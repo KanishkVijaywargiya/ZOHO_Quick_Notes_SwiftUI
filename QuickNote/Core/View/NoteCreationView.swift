@@ -11,14 +11,21 @@ struct NoteCreationView: View {
     @State var title: String = ""
     @State var paragraph: String = ""
     
+    var str1 = "**Bold**"
+    var str2 = "*Italic*"
+    var str3 = "~Strike Through~"
+    var str4 = "[Click me](https://www.zoho.com)"
+    
     var body: some View {
         ZStack {
             ScrollView {
-                VStack {
+                VStack(alignment: .leading) {
                     // TODO: custom back button, gallery / camera clips, save button
                     // TODO: Note, you can even use markdowns & give some eg. also.
                     titleTextField
                     bodyTextArea
+                    notetext
+                    
                     Divider().padding(.top)
                     outputTextArea
                 }.padding()
@@ -56,6 +63,16 @@ extension NoteCreationView {
             .background(Color(uiColor: .secondarySystemBackground))
             .shadow(color: .black.opacity(0.3), radius: 20, x: 3, y: 3)
             .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
+    }
+    
+    private var notetext: some View {
+        VStack(alignment: .leading) {
+            Text("**Note:** You can use markdowns too.\neg.:")
+            Text("\u{2022} \(str1)")
+            Text("\u{2022} \(str2)")
+            Text("\u{2022} \(str3)")
+            Text("\u{2022} \(str4)")
+        }
     }
     
     private var outputTextArea: some View {
