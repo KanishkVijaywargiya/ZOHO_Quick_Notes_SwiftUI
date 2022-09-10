@@ -21,17 +21,7 @@ struct NoteCreationView: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     // TODO: custom back button, gallery / camera clips, save button
-                    // TODO: Note, you can even use markdowns & give some eg. also.
-                    
-                    HStack {
-                        ButtonComponent(text: "chevron.left", type: .two, action: {})
-                        Spacer()
-                        ButtonComponent(text: "paperclip", type: .two, action: {})
-                        
-                        ButtonComponent(text: "Save", action: {})
-                            .padding(.leading, 8)
-                    }
-                    
+                    buttonsUI
                     
                     titleTextField
                     bodyTextArea
@@ -53,6 +43,17 @@ struct NoteCreationView_Previews: PreviewProvider {
 }
 
 extension NoteCreationView {
+    private var buttonsUI: some View {
+        HStack {
+            ButtonComponent(text: "chevron.left", type: .two, action: {})
+            Spacer()
+            ButtonComponent(text: "paperclip", type: .two, action: {})
+            
+            ButtonComponent(text: "Save", action: {})
+                .padding(.leading, 8)
+        }
+    }
+    
     private var titleTextField: some View {
         TextField("Title", text: $title)
             .foregroundColor(Color(hex: "#000"))
