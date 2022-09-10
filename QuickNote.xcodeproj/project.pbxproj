@@ -15,6 +15,8 @@
 		046F2B9B28CCB9AB00594EB8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9A28CCB9AB00594EB8 /* ColorExtension.swift */; };
 		046F2B9D28CCBCBF00594EB8 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9C28CCBCBF00594EB8 /* TextArea.swift */; };
 		046F2B9F28CCD75000594EB8 /* GetAttributeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9E28CCD75000594EB8 /* GetAttributeString.swift */; };
+		046F2BA128CCE18C00594EB8 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2BA028CCE18C00594EB8 /* ButtonComponent.swift */; };
+		046F2BA328CCE28E00594EB8 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2BA228CCE28E00594EB8 /* BlurView.swift */; };
 		04BAA14628CC5ECD00CC6972 /* QuickNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA14528CC5ECD00CC6972 /* QuickNoteApp.swift */; };
 		04BAA14828CC5ECD00CC6972 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA14728CC5ECD00CC6972 /* ContentView.swift */; };
 		04BAA14A28CC5ED500CC6972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BAA14928CC5ED500CC6972 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		046F2B9A28CCB9AB00594EB8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		046F2B9C28CCBCBF00594EB8 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		046F2B9E28CCD75000594EB8 /* GetAttributeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAttributeString.swift; sourceTree = "<group>"; };
+		046F2BA028CCE18C00594EB8 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
+		046F2BA228CCE28E00594EB8 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		04BAA14228CC5ECD00CC6972 /* QuickNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BAA14528CC5ECD00CC6972 /* QuickNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNoteApp.swift; sourceTree = "<group>"; };
 		04BAA14728CC5ECD00CC6972 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +141,7 @@
 				046F2B9028CC679300594EB8 /* NetworkingManager.swift */,
 				046F2B9C28CCBCBF00594EB8 /* TextArea.swift */,
 				046F2B9E28CCD75000594EB8 /* GetAttributeString.swift */,
+				046F2BA228CCE28E00594EB8 /* BlurView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				04BAA16528CC630E00CC6972 /* Card.swift */,
+				046F2BA028CCE18C00594EB8 /* ButtonComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046F2B9928CCB6A400594EB8 /* NavigationController.swift in Sources */,
+				046F2BA128CCE18C00594EB8 /* ButtonComponent.swift in Sources */,
 				046F2B9D28CCBCBF00594EB8 /* TextArea.swift in Sources */,
 				04BAA15728CC612C00CC6972 /* HomeView.swift in Sources */,
 				04BAA16628CC630E00CC6972 /* Card.swift in Sources */,
@@ -245,6 +252,7 @@
 				04BAA15928CC613A00CC6972 /* DetailView.swift in Sources */,
 				04BAA15B28CC615000CC6972 /* NoteCreationView.swift in Sources */,
 				04BAA14828CC5ECD00CC6972 /* ContentView.swift in Sources */,
+				046F2BA328CCE28E00594EB8 /* BlurView.swift in Sources */,
 				04BAA14628CC5ECD00CC6972 /* QuickNoteApp.swift in Sources */,
 				046F2B9728CC747B00594EB8 /* NotesViewModel.swift in Sources */,
 				046F2B9528CC71BB00594EB8 /* NotesDataService.swift in Sources */,

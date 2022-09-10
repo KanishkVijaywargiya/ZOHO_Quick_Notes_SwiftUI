@@ -22,6 +22,17 @@ struct NoteCreationView: View {
                 VStack(alignment: .leading) {
                     // TODO: custom back button, gallery / camera clips, save button
                     // TODO: Note, you can even use markdowns & give some eg. also.
+                    
+                    HStack {
+                        ButtonComponent(text: "chevron.left", type: .two, action: {})
+                        Spacer()
+                        ButtonComponent(text: "paperclip", type: .two, action: {})
+                        
+                        ButtonComponent(text: "Save", action: {})
+                            .padding(.leading, 8)
+                    }
+                    
+                    
                     titleTextField
                     bodyTextArea
                     notetext
