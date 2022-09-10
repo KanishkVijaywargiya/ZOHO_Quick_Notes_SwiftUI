@@ -7,18 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046F2B9128CC679300594EB8 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9028CC679300594EB8 /* NetworkingManager.swift */; };
+		046F2B9328CC6B2600594EB8 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9228CC6B2600594EB8 /* Notes.swift */; };
+		046F2B9528CC71BB00594EB8 /* NotesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9428CC71BA00594EB8 /* NotesDataService.swift */; };
+		046F2B9728CC747B00594EB8 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9628CC747B00594EB8 /* NotesViewModel.swift */; };
+		046F2B9928CCB6A400594EB8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9828CCB6A400594EB8 /* NavigationController.swift */; };
+		046F2B9B28CCB9AB00594EB8 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9A28CCB9AB00594EB8 /* ColorExtension.swift */; };
+		046F2B9D28CCBCBF00594EB8 /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9C28CCBCBF00594EB8 /* TextArea.swift */; };
 		04BAA14628CC5ECD00CC6972 /* QuickNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA14528CC5ECD00CC6972 /* QuickNoteApp.swift */; };
 		04BAA14828CC5ECD00CC6972 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA14728CC5ECD00CC6972 /* ContentView.swift */; };
 		04BAA14A28CC5ED500CC6972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BAA14928CC5ED500CC6972 /* Assets.xcassets */; };
 		04BAA14D28CC5ED500CC6972 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BAA14C28CC5ED500CC6972 /* Preview Assets.xcassets */; };
+		04BAA15728CC612C00CC6972 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA15628CC612C00CC6972 /* HomeView.swift */; };
+		04BAA15928CC613A00CC6972 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA15828CC613A00CC6972 /* DetailView.swift */; };
+		04BAA15B28CC615000CC6972 /* NoteCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA15A28CC615000CC6972 /* NoteCreationView.swift */; };
+		04BAA16628CC630E00CC6972 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA16528CC630E00CC6972 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046F2B9028CC679300594EB8 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		046F2B9228CC6B2600594EB8 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		046F2B9428CC71BA00594EB8 /* NotesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDataService.swift; sourceTree = "<group>"; };
+		046F2B9628CC747B00594EB8 /* NotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		046F2B9828CCB6A400594EB8 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		046F2B9A28CCB9AB00594EB8 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		046F2B9C28CCBCBF00594EB8 /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		04BAA14228CC5ECD00CC6972 /* QuickNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BAA14528CC5ECD00CC6972 /* QuickNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNoteApp.swift; sourceTree = "<group>"; };
 		04BAA14728CC5ECD00CC6972 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		04BAA14928CC5ED500CC6972 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BAA14C28CC5ED500CC6972 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		04BAA15628CC612C00CC6972 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		04BAA15828CC613A00CC6972 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		04BAA15A28CC615000CC6972 /* NoteCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCreationView.swift; sourceTree = "<group>"; };
+		04BAA16528CC630E00CC6972 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +73,10 @@
 		04BAA14428CC5ECD00CC6972 /* QuickNote */ = {
 			isa = PBXGroup;
 			children = (
+				04BAA15F28CC622300CC6972 /* Utilities */,
+				04BAA15E28CC621D00CC6972 /* Extension */,
+				04BAA15D28CC621100CC6972 /* Services */,
+				04BAA15C28CC61F900CC6972 /* Core */,
 				04BAA14528CC5ECD00CC6972 /* QuickNoteApp.swift */,
 				04BAA14728CC5ECD00CC6972 /* ContentView.swift */,
 				04BAA14928CC5ED500CC6972 /* Assets.xcassets */,
@@ -65,6 +91,77 @@
 				04BAA14C28CC5ED500CC6972 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04BAA15528CC60E800CC6972 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				046F2B9228CC6B2600594EB8 /* Notes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04BAA15C28CC61F900CC6972 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				04BAA16028CC623D00CC6972 /* Components */,
+				04BAA15528CC60E800CC6972 /* Model */,
+				04BAA16428CC62CB00CC6972 /* View */,
+				04BAA16328CC62C500CC6972 /* ViewModel */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		04BAA15D28CC621100CC6972 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				046F2B9428CC71BA00594EB8 /* NotesDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		04BAA15E28CC621D00CC6972 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				046F2B9828CCB6A400594EB8 /* NavigationController.swift */,
+				046F2B9A28CCB9AB00594EB8 /* ColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		04BAA15F28CC622300CC6972 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				046F2B9028CC679300594EB8 /* NetworkingManager.swift */,
+				046F2B9C28CCBCBF00594EB8 /* TextArea.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		04BAA16028CC623D00CC6972 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				04BAA16528CC630E00CC6972 /* Card.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		04BAA16328CC62C500CC6972 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				046F2B9628CC747B00594EB8 /* NotesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04BAA16428CC62CB00CC6972 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04BAA15628CC612C00CC6972 /* HomeView.swift */,
+				04BAA15828CC613A00CC6972 /* DetailView.swift */,
+				04BAA15A28CC615000CC6972 /* NoteCreationView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +234,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046F2B9928CCB6A400594EB8 /* NavigationController.swift in Sources */,
+				046F2B9D28CCBCBF00594EB8 /* TextArea.swift in Sources */,
+				04BAA15728CC612C00CC6972 /* HomeView.swift in Sources */,
+				04BAA16628CC630E00CC6972 /* Card.swift in Sources */,
+				046F2B9B28CCB9AB00594EB8 /* ColorExtension.swift in Sources */,
+				04BAA15928CC613A00CC6972 /* DetailView.swift in Sources */,
+				04BAA15B28CC615000CC6972 /* NoteCreationView.swift in Sources */,
 				04BAA14828CC5ECD00CC6972 /* ContentView.swift in Sources */,
 				04BAA14628CC5ECD00CC6972 /* QuickNoteApp.swift in Sources */,
+				046F2B9728CC747B00594EB8 /* NotesViewModel.swift in Sources */,
+				046F2B9528CC71BB00594EB8 /* NotesDataService.swift in Sources */,
+				046F2B9128CC679300594EB8 /* NetworkingManager.swift in Sources */,
+				046F2B9328CC6B2600594EB8 /* Notes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
