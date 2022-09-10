@@ -13,7 +13,7 @@ struct Card: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(item.title)
-            Text(getAttributedString(markdown: item.body))
+            Text(GetAttributeString.getAttributedString(markdown: item.body))
 //                .lineLimit(3)
             Text(item.dateFormatted)
         }
@@ -32,17 +32,4 @@ extension Color {
     static func random() -> Color {
         return Color(red: Double.random(in: 0...1), green: Double.random(in: 0...1), blue: Double.random(in: 0...1))
     }
-}
-
-extension Card {
-    func getAttributedString(markdown: String) -> AttributedString {
-        do {
-            let attributedString = try AttributedString(markdown: markdown)
-            return attributedString
-        } catch {
-            print("Couldn't parse: \(error)")
-        }
-        return AttributedString("Error parsing markdown")
-    }
-    
 }

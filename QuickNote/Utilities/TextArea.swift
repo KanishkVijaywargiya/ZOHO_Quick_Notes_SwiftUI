@@ -21,12 +21,15 @@ struct TextArea: View {
         ZStack(alignment: .topLeading) {
             if text.isEmpty {
                 Text(placeholder)
+                    .font(.body)
                     .foregroundColor(Color(UIColor.placeholderText))
+                    .padding(.top, 16)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 12)
             }
             
             TextEditor(text: $text)
+                .padding(.top, 16)
                 .padding(4)
         }
         .font(.body)
