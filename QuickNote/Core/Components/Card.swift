@@ -13,12 +13,20 @@ struct Card: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(item.title)
-//            Text(GetAttributeString.getAttributedString(markdown: item.body))
-//                .lineLimit(3)
+                .foregroundColor(.primary)
+                .font(.title)
+                .fontWeight(.bold)
+                .multilineTextAlignment(.leading)
             Text(item.dateFormatted)
+                .foregroundColor(.secondary)
+                .font(.footnote)
+                .fontWeight(.medium)
         }
+        .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color.random())
+        .cornerRadius(22)
+        .shadow(color: .black.opacity(0.3), radius: 6, x: 3, y: 6)
     }
 }
 

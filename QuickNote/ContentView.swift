@@ -11,7 +11,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             HomeView().navigationTitle("Notes")
-                .environment(\.colorScheme, .light)
         }
     }
 }

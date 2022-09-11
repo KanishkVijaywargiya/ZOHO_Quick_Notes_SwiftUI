@@ -49,27 +49,47 @@ extension HomeView {
     }
     
     private var cardList: some View {
-        List {
-            HStack(alignment: .top) {
-                LazyVStack(spacing: 8) {
-                    ForEach(vm.splitNotes[0]) { item in
-                        Card(item: item)
+        ScrollView {
+            HStack(alignment: .top, spacing: 12) {
+                LazyVStack(spacing: 12) {
+                    ForEach(splitArray[0]) { item in
+                        NavigationLink {
+                            DetailView(detailItems: item)
+                        } label: {
+                            Card(item: item)
+                        }
                     }
                 }
-                LazyVStack(spacing: 8) {
-                    ForEach(vm.splitNotes[1]) { item in
-                        Card(item: item)
+                LazyVStack(spacing: 12) {
+                    ForEach(splitArray[1]) { item in
+                        NavigationLink {
+                            DetailView(detailItems: item)
+                        } label: {
+                            Card(item: item)
+                        }
                     }
                 }
             }
-        }.listStyle(PlainListStyle())
-        //        List {
-        //            ForEach(vm.allNotes) { item in
-        //                Card(item: item)
-        //                    .background(
-        //                        NavigationLink("", destination: DetailView(detailItems: item)).opacity(0)
-        //                    )
-        //            }
-        //        }.listStyle(PlainListStyle())
+            .padding(.horizontal, 18)
+        }
+    }
+    
+    private var splitArray: [[Notes]] {
+        var result: [[Notes]] = []
+        var list1: [Notes] = []
+        var list2: [Notes] = []
+        vm.allNotes.forEach { note in
+            let index = vm.allNotes.firstIndex {$0.id == note.id }
+            if let index = index {
+                if index % 2 == 0 {
+                    list1.append(note)
+                } else {
+                    list2.append(note)
+                }
+            }
+        }
+        result.append(list1)
+        result.append(list2)
+        return result
     }
 }
