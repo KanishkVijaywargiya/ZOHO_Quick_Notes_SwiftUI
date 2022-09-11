@@ -11,23 +11,23 @@ struct HomeView: View {
     @StateObject var vm = NotesViewModel()
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
+            // cards
             if vm.isLoading {
                 ProgressView()
             } else {
-                List {
+                ScrollView {
                     ForEach(vm.allNotes) { item in
-                        Card(item: item)
+                        VStack {
+                            Card(item: item)
+                                .background(
+                                    NavigationLink("", destination: DetailView(detailItems: item)).opacity(0)
+                                )
+                        }
                     }
-                    /*
-                     Text(getAttributedString(markdown: "[Click me](https://www.zoho.com)"))
-                     Text(getAttributedString(markdown: "**Hello**"))
-                     Text(getAttributedString(markdown: "***Hello***"))
-                     Text(getAttributedString(markdown: "*Hello*"))
-                     Text(getAttributedString(markdown: "~Hello~"))
-                     */
-                }.listStyle(PlainListStyle())
+                }
             }
             
+            // FAB Button
             if !vm.isLoading {
                 NavigationLink { NoteCreationView() } label: {
                     Image(systemName: "plus")

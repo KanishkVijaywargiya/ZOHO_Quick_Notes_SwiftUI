@@ -25,6 +25,7 @@
 		04BAA15928CC613A00CC6972 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA15828CC613A00CC6972 /* DetailView.swift */; };
 		04BAA15B28CC615000CC6972 /* NoteCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA15A28CC615000CC6972 /* NoteCreationView.swift */; };
 		04BAA16628CC630E00CC6972 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA16528CC630E00CC6972 /* Card.swift */; };
+		04C17F9E28CDAD020044DDE4 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17F9D28CDAD020044DDE4 /* PreviewProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		04BAA15828CC613A00CC6972 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		04BAA15A28CC615000CC6972 /* NoteCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCreationView.swift; sourceTree = "<group>"; };
 		04BAA16528CC630E00CC6972 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		04C17F9D28CDAD020044DDE4 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			children = (
 				046F2B9828CCB6A400594EB8 /* NavigationController.swift */,
 				046F2B9A28CCB9AB00594EB8 /* ColorExtension.swift */,
+				04C17F9D28CDAD020044DDE4 /* PreviewProvider.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				04BAA15B28CC615000CC6972 /* NoteCreationView.swift in Sources */,
 				04BAA14828CC5ECD00CC6972 /* ContentView.swift in Sources */,
 				046F2BA328CCE28E00594EB8 /* BlurView.swift in Sources */,
+				04C17F9E28CDAD020044DDE4 /* PreviewProvider.swift in Sources */,
 				04BAA14628CC5ECD00CC6972 /* QuickNoteApp.swift in Sources */,
 				046F2B9728CC747B00594EB8 /* NotesViewModel.swift in Sources */,
 				046F2B9528CC71BB00594EB8 /* NotesDataService.swift in Sources */,

@@ -41,6 +41,7 @@ struct ButtonComponent: View {
                     .shadow(color: .black.opacity(0.3), radius: 1, x: 0, y: 2)
             }
         }
+        .onTapGesture { action() }
     }
 }
 
