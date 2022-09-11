@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct NoteCreationView: View {
+    @Environment(\.dismiss) var dismissMode
+    @StateObject var hapticVM = HapticManager()
+    
     @State var title: String = ""
     @State var paragraph: String = ""
     
@@ -45,11 +48,21 @@ struct NoteCreationView_Previews: PreviewProvider {
 extension NoteCreationView {
     private var buttonsUI: some View {
         HStack {
-            ButtonComponent(text: "chevron.left", type: .two, action: {})
+            ButtonComponent(text: "chevron.left", type: .two, action: {
+                hapticVM.impact(style: .soft)
+                hapticVM.haptic(type: .success)
+                dismissMode()
+            })
             Spacer()
-            ButtonComponent(text: "paperclip", type: .two, action: {})
+            ButtonComponent(text: "paperclip", type: .two, action: {
+                hapticVM.impact(style: .soft)
+                hapticVM.haptic(type: .success)
+            })
             
-            ButtonComponent(text: "Save", action: {})
+            ButtonComponent(text: "Save", action: {
+                hapticVM.impact(style: .soft)
+                hapticVM.haptic(type: .success)
+            })
                 .padding(.leading, 8)
         }
     }

@@ -15,19 +15,24 @@ struct HomeView: View {
             if vm.isLoading {
                 ProgressView()
             } else {
-                ScrollView {
-                    ForEach(vm.allNotes) { item in
-                        VStack {
-                            Card(item: item)
-                                .background(
-                                    NavigationLink("", destination: DetailView(detailItems: item)).opacity(0)
-                                )
-                        }
-                    }
-                }
+                cardList
             }
             
             // FAB Button
+            fabButton
+        }
+    }
+}
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView(vm: NotesViewModel())
+    }
+}
+
+extension HomeView {
+    private var fabButton: some View {
+        VStack {
             if !vm.isLoading {
                 NavigationLink { NoteCreationView() } label: {
                     Image(systemName: "plus")
@@ -41,10 +46,15 @@ struct HomeView: View {
             }
         }
     }
-}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView(vm: NotesViewModel())
+    
+    private var cardList: some View {
+        List {
+            ForEach(vm.allNotes) { item in
+                Card(item: item)
+                    .background(
+                        NavigationLink("", destination: DetailView(detailItems: item)).opacity(0)
+                    )
+            }
+        }.listStyle(PlainListStyle())
     }
 }

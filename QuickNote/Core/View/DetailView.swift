@@ -9,16 +9,29 @@ import SwiftUI
 
 struct DetailView: View {
     @Environment(\.dismiss) var dismissMode
+    @StateObject var hapticVM = HapticManager()
+    @State var openImageModel: Notes? = nil
     let detailItems: Notes
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(alignment: .leading, spacing: 10) {
-                imageSection
-                titleSection
-                dateSection
-                bodySection
+        ZStack(alignment: .topLeading) {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading, spacing: 10) {
+                    ImageView(detailItems: detailItems)
+                        .onTapGesture {
+                            hapticVM.impact(style: .soft)
+                            hapticVM.haptic(type: .success)
+                            openImageModel = detailItems
+                        }
+                    titleSection
+                    dateSection
+                    bodySection
+                }
             }
+            backButton
+        }
+        .fullScreenCover(item: $openImageModel) { item in
+            ImageGallery(selectedModel: item)
         }
         .ignoresSafeArea()
         .navigationBarHidden(true)
@@ -32,16 +45,6 @@ struct DetailView_Previews: PreviewProvider {
 }
 
 extension DetailView {
-    private var imageSection: some View {
-        Image("img1")
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .overlay(
-                ButtonComponent(text: "chevron.left", type: .two, action: {dismissMode()})
-                    .position(x: 40, y: 80)
-            )
-    }
-    
     private var titleSection: some View {
         Text(detailItems.title)
             .font(.largeTitle)
@@ -59,5 +62,15 @@ extension DetailView {
     private var bodySection: some View {
         Text(GetAttributeString.getAttributedString(markdown: detailItems.body))
             .padding()
+    }
+    
+    private var backButton: some View {
+        ButtonComponent(text: "chevron.left", type: .two, action: {
+            hapticVM.impact(style: .soft)
+            hapticVM.haptic(type: .success)
+            dismissMode()
+        })
+            .padding(.horizontal)
+            .padding(.top, 40)
     }
 }
