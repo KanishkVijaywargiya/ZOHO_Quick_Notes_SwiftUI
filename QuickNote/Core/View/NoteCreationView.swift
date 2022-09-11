@@ -11,6 +11,7 @@ struct NoteCreationView: View {
     @Environment(\.dismiss) var dismissMode
     @StateObject var hapticVM = HapticManager()
     
+    @State var openActionSheet = false
     @State var title: String = ""
     @State var paragraph: String = ""
     
@@ -36,6 +37,19 @@ struct NoteCreationView: View {
             }
         }
         .navigationBarHidden(true)
+        .confirmationDialog("What do you want to open sir ?", isPresented: $openActionSheet) {
+            Button {} label: {
+                Text("Camera")
+            }
+            Button {} label: {
+                Text("Photo Gallery")
+            }
+            Button("Cancel", role: .cancel) {
+                openActionSheet = false
+            }
+        } message: {
+            Text("What do you want to open sir?")
+        }
     }
 }
 
@@ -57,13 +71,13 @@ extension NoteCreationView {
             ButtonComponent(text: "paperclip", type: .two, action: {
                 hapticVM.impact(style: .soft)
                 hapticVM.haptic(type: .success)
+                openActionSheet.toggle()
             })
             
             ButtonComponent(text: "Save", action: {
                 hapticVM.impact(style: .soft)
                 hapticVM.haptic(type: .success)
-            })
-                .padding(.leading, 8)
+            }).padding(.leading, 8)
         }
     }
     
