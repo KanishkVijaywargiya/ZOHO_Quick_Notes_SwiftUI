@@ -21,7 +21,11 @@ struct ImageView: View {
                     .resizable()
                     .scaledToFill()
             } else if vm.isLoading {
-                ProgressView()
+                VStack {
+                    ProgressView()
+                }
+                .frame(maxWidth: .infinity)
+                .frame(height: 300)
             } else {
                 Image("swiftuilogo")
                     .resizable()
