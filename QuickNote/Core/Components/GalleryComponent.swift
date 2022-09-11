@@ -17,25 +17,17 @@ struct GalleryComponent: View {
     //    }
     
     var body: some View {
-        VStack {
-            if detailItems.imageURL?.count == 0 {
-                Image(systemName: "fire")
-                    .resizable()
-                    .foregroundColor(.white)
-                    .scaledToFill()
-                    .frame(width: UIScreen.main.bounds.width - 20, height: 80)
-            } else {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        ForEach(vm.allImages, id: \.self) { image in
-                            buildImageView(image)
-                        }
-                    }
-                }
-                .onAppear {
-                    vm.getAllImages(detailItems)
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(vm.allImages, id: \.self) { image in
+                    buildImageView(image)
                 }
             }
+            .frame(maxHeight: 300)
+        }
+        .padding()
+        .onAppear {
+            vm.getAllImages(detailItems)
         }
     }
     
@@ -43,9 +35,7 @@ struct GalleryComponent: View {
         AsyncImage(url: URL(string: url)) { imagePhase in
             switch imagePhase {
             case .empty:
-                ProgressView()
-                    .scaledToFill()
-                    .frame(width: UIScreen.main.bounds.width - 20, height: 80)
+                Color.gray.opacity(0.3).frame(width: UIScreen.main.bounds.width - 20, height: 300)
             case .failure:
                 Image(systemName: "exclamationmark.triangle")
             case .success(let image):
@@ -57,14 +47,11 @@ struct GalleryComponent: View {
                 fatalError()
             }
         }
-        .overlay(.black.opacity(0.2))
-        .frame(maxHeight: 80)
     }
 }
 
 struct GalleryComponent_Previews: PreviewProvider {
     static var previews: some View {
         GalleryComponent(detailItems: dev.detail)
-        //        GalleryComponent(detailItems: dev.detail)
     }
 }
