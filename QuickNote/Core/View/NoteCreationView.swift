@@ -77,7 +77,9 @@ extension NoteCreationView {
             ButtonComponent(text: "Save", action: {
                 hapticVM.impact(style: .soft)
                 hapticVM.haptic(type: .success)
-            }).padding(.leading, 8)
+            })
+            .padding(.leading, 8)
+            .disabled(title.isEmpty && paragraph.isEmpty)
         }
     }
     

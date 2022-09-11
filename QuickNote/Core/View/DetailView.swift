@@ -17,6 +17,7 @@ struct DetailView: View {
         ZStack(alignment: .topLeading) {
             ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 10) {
+                    //ImageView(detailItems: detailItems)
                     ImageView(detailItems: detailItems)
                         .onTapGesture {
                             hapticVM.impact(style: .soft)
@@ -70,7 +71,7 @@ extension DetailView {
             hapticVM.haptic(type: .success)
             dismissMode()
         })
-            .padding(.horizontal)
-            .padding(.top, 40)
+        .padding(.horizontal)
+        .padding(.top, 40)
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GalleryComponent: View {
+    @StateObject var vm = NotesViewModel()
     let detailItems: Notes
     //    @StateObject var vm: ImageLoaderViewModel
     
@@ -16,28 +17,33 @@ struct GalleryComponent: View {
     //    }
     
     var body: some View {
-        buildImageView(detailItems.imageURL ?? "")
-        //                ZStack(alignment: .center) {
-        //                    if let image = vm.image {
-        //                        Image(uiImage: image)
-        //                            .resizable()
-        //                            .scaledToFill()
-        //                            .frame(width: UIScreen.main.bounds.width - 20, height: 80)
-        //                    } else if vm.isLoading {
-        //                        ProgressView()
-        //                    } else {
-        //                        Image("swiftuilogo")
-        //                            .resizable()
-        //                            .scaledToFill()
-        //                    }
-        //                }
+        VStack {
+            if detailItems.imageURL?.count == 0 {
+                Image(systemName: "fire")
+                    .resizable()
+                    .foregroundColor(.white)
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width - 20, height: 80)
+            } else {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(vm.allImages, id: \.self) { image in
+                            buildImageView(image)
+                        }
+                    }
+                }
+                .onAppear {
+                    vm.getAllImages(detailItems)
+                }
+            }
+        }
     }
     
     private func buildImageView(_ url: String) -> some View {
         AsyncImage(url: URL(string: url)) { imagePhase in
             switch imagePhase {
             case .empty:
-                Color.gray
+                ProgressView()
                     .scaledToFill()
                     .frame(width: UIScreen.main.bounds.width - 20, height: 80)
             case .failure:

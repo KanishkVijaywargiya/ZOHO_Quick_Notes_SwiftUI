@@ -8,14 +8,33 @@
 import SwiftUI
 
 struct ImageView: View {
+    //    let imageStr: String
     @StateObject var vm: ImageLoaderViewModel
-    
     init(detailItems: Notes) {
         _vm = StateObject(wrappedValue: ImageLoaderViewModel(notes: detailItems))
     }
     
     var body: some View {
         ZStack(alignment: .center) {
+            //            AsyncImage(url: URL(string: imageStr)) { imagePhase in
+            //                switch imagePhase {
+            //                case .empty:
+            //                    VStack {
+            //                        ProgressView()
+            //                    }
+            //                    .frame(maxWidth: .infinity)
+            //                    .frame(height: 300)
+            //                case .failure:
+            //                    Image(systemName: "exclamationmark.triangle")
+            //                        .frame(height: 80)
+            //                case .success(let image):
+            //                    image
+            //                        .resizable()
+            //                        .scaledToFill()
+            //                @unknown default:
+            //                    fatalError()
+            //                }
+            //            }
             if let image = vm.image {
                 Image(uiImage: image)
                     .resizable()

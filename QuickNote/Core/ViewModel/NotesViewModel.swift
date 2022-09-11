@@ -10,6 +10,7 @@ import Combine
 
 class NotesViewModel: ObservableObject {
     @Published var allNotes: [Notes] = []
+    @Published var allImages: [String] = []
     @Published var isLoading: Bool = false
     
     private var notesDataService = NotesDataService.instance
@@ -27,5 +28,20 @@ class NotesViewModel: ObservableObject {
                 self?.isLoading = false
             }
             .store(in: &cancellables)
+    }
+    
+    func getAllImages(_ arr: Notes) {
+//        let index = allNotes.firstIndex(where: {$0.id == arr.id})
+        var newArrData: [String] = []
+        if let firstImage = arr.imageURL {
+            let newArr = allNotes.filter {$0.id != arr.id && $0.imageURL != "" && $0.imageURL != nil}
+            newArr.forEach { item in
+                let imgUrl = item.imageURL
+                newArrData.append(imgUrl ?? "")
+            }
+            newArrData.insert(firstImage, at: 0)
+        }
+        print("newArrData", newArrData)
+        allImages = newArrData
     }
 }
