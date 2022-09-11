@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var vm = NotesViewModel()
+    
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             // cards
@@ -49,12 +50,26 @@ extension HomeView {
     
     private var cardList: some View {
         List {
-            ForEach(vm.allNotes) { item in
-                Card(item: item)
-                    .background(
-                        NavigationLink("", destination: DetailView(detailItems: item)).opacity(0)
-                    )
+            HStack(alignment: .top) {
+                LazyVStack(spacing: 8) {
+                    ForEach(vm.splitNotes[0]) { item in
+                        Card(item: item)
+                    }
+                }
+                LazyVStack(spacing: 8) {
+                    ForEach(vm.splitNotes[1]) { item in
+                        Card(item: item)
+                    }
+                }
             }
         }.listStyle(PlainListStyle())
+        //        List {
+        //            ForEach(vm.allNotes) { item in
+        //                Card(item: item)
+        //                    .background(
+        //                        NavigationLink("", destination: DetailView(detailItems: item)).opacity(0)
+        //                    )
+        //            }
+        //        }.listStyle(PlainListStyle())
     }
 }

@@ -13,7 +13,7 @@ struct Card: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(item.title)
-            Text(GetAttributeString.getAttributedString(markdown: item.body))
+//            Text(GetAttributeString.getAttributedString(markdown: item.body))
 //                .lineLimit(3)
             Text(item.dateFormatted)
         }
