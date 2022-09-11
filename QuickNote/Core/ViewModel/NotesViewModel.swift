@@ -41,7 +41,6 @@ class NotesViewModel: ObservableObject {
             }
             newArrData.insert(firstImage, at: 0)
         }
-        print("newArrData", newArrData)
         allImages = newArrData
     }
 }

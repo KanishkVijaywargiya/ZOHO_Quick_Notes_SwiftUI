@@ -24,7 +24,6 @@ class NotesDataService {
             .decode(type: [Notes].self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .sink (receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] returnedNotes in
-                print("go in...")
                 guard let self = self else { return }
                 self.allNotes = returnedNotes
                 self.noteSubsciption?.cancel()

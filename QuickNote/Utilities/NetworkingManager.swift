@@ -23,7 +23,6 @@ class NetworkingManager {
     }
     
     static func download(url: URL) -> AnyPublisher<Data, Error> {
-        print("url------>", url)
         return URLSession.shared
             .dataTaskPublisher(for: url)
             .tryMap ({try handleOutput(output: $0, url: url)})
@@ -35,10 +34,8 @@ class NetworkingManager {
         guard
             let response = output.response as? HTTPURLResponse,
             response.statusCode >= 200 && response.statusCode < 300 else {
-            print("data...->")
             throw NetworkingError.badURLResponse(url: url)
         }
-        print("Op---->", output)
         return output.data
     }
     
