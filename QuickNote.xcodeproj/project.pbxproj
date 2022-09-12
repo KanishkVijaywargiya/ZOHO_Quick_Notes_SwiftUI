@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042D9D6D28CF52210016F0CD /* AutoKeyboardHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D9D6C28CF52210016F0CD /* AutoKeyboardHide.swift */; };
 		046F2B9128CC679300594EB8 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9028CC679300594EB8 /* NetworkingManager.swift */; };
 		046F2B9328CC6B2600594EB8 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9228CC6B2600594EB8 /* Notes.swift */; };
 		046F2B9528CC71BB00594EB8 /* NotesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9428CC71BA00594EB8 /* NotesDataService.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042D9D6C28CF52210016F0CD /* AutoKeyboardHide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoKeyboardHide.swift; sourceTree = "<group>"; };
 		046F2B9028CC679300594EB8 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		046F2B9228CC6B2600594EB8 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		046F2B9428CC71BA00594EB8 /* NotesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDataService.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				046F2B9E28CCD75000594EB8 /* GetAttributeString.swift */,
 				046F2BA228CCE28E00594EB8 /* BlurView.swift */,
 				0478D0F028CDE2F4000FB6E3 /* HapticManager.swift */,
+				042D9D6C28CF52210016F0CD /* AutoKeyboardHide.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				046F2B9728CC747B00594EB8 /* NotesViewModel.swift in Sources */,
 				046F2B9528CC71BB00594EB8 /* NotesDataService.swift in Sources */,
 				046F2B9128CC679300594EB8 /* NetworkingManager.swift in Sources */,
+				042D9D6D28CF52210016F0CD /* AutoKeyboardHide.swift in Sources */,
 				046F2B9F28CCD75000594EB8 /* GetAttributeString.swift in Sources */,
 				046F2B9328CC6B2600594EB8 /* Notes.swift in Sources */,
 			);

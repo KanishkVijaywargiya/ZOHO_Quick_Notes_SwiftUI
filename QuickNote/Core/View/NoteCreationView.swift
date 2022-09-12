@@ -17,8 +17,9 @@ struct NoteCreationView: View {
     
     var str1 = "**Bold**"
     var str2 = "*Italic*"
-    var str3 = "~Strike Through~"
-    var str4 = "[Click me](https://www.zoho.com)"
+    var str3 = "***Italic Bold***"
+    var str4 = "~Strike Through~"
+    var str5 = "[Click me](https://www.zoho.com)"
     
     var body: some View {
         ZStack {
@@ -34,6 +35,9 @@ struct NoteCreationView: View {
                     Divider().padding(.top)
                     outputTextArea
                 }.padding()
+                    .onTapGesture {
+                        self.endEditing()
+                    }
             }
         }
         .navigationBarHidden(true)
@@ -113,6 +117,7 @@ extension NoteCreationView {
             Text("\u{2022} \(str2)")
             Text("\u{2022} \(str3)")
             Text("\u{2022} \(str4)")
+            Text("\u{2022} \(str5)")
         }
     }
     
@@ -133,5 +138,9 @@ extension NoteCreationView {
                 .font(.title2)
             }
         }
+    }
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
     }
 }
