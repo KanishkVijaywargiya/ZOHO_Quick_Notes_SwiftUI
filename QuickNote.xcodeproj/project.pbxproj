@@ -34,6 +34,7 @@
 		04C17FA428CDC5950044DDE4 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17FA328CDC5950044DDE4 /* ImageView.swift */; };
 		04C17FA628CDD6F10044DDE4 /* ImageGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17FA528CDD6F10044DDE4 /* ImageGallery.swift */; };
 		04C17FA828CDD8440044DDE4 /* GalleryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17FA728CDD8440044DDE4 /* GalleryComponent.swift */; };
+		04EDFA9328D0C12400792DFC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EDFA9228D0C12400792DFC /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		04C17FA328CDC5950044DDE4 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		04C17FA528CDD6F10044DDE4 /* ImageGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGallery.swift; sourceTree = "<group>"; };
 		04C17FA728CDD8440044DDE4 /* GalleryComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryComponent.swift; sourceTree = "<group>"; };
+		04EDFA9228D0C12400792DFC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				046F2BA228CCE28E00594EB8 /* BlurView.swift */,
 				0478D0F028CDE2F4000FB6E3 /* HapticManager.swift */,
 				042D9D6C28CF52210016F0CD /* AutoKeyboardHide.swift */,
+				04EDFA9228D0C12400792DFC /* ImagePicker.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				04C17FA828CDD8440044DDE4 /* GalleryComponent.swift in Sources */,
 				04BAA15B28CC615000CC6972 /* NoteCreationView.swift in Sources */,
 				04BAA14828CC5ECD00CC6972 /* ContentView.swift in Sources */,
+				04EDFA9328D0C12400792DFC /* ImagePicker.swift in Sources */,
 				04C17FA628CDD6F10044DDE4 /* ImageGallery.swift in Sources */,
 				046F2BA328CCE28E00594EB8 /* BlurView.swift in Sources */,
 				04C17F9E28CDAD020044DDE4 /* PreviewProvider.swift in Sources */,
@@ -426,6 +430,8 @@
 				DEVELOPMENT_TEAM = YHZVJQ792Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow QuickNotes to access camera";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow QuickNotes to access photo gallery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -455,6 +461,8 @@
 				DEVELOPMENT_TEAM = YHZVJQ792Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow QuickNotes to access camera";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow QuickNotes to access photo gallery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

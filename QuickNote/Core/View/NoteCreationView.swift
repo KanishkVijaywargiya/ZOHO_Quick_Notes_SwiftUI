@@ -7,17 +7,26 @@
 
 import SwiftUI
 
+enum CameraType {
+    case camera, photoLibrary
+}
+
 struct NoteCreationView: View {
     @Environment(\.dismiss) var dismissMode
     @StateObject var hapticVM = HapticManager()
     
-    @State var openActionSheet = false
+    // confimation dialog
+    @State var openActionSheet: Bool = false
+    @State var openCameraRole: Bool = false
+    @State var cameraType: CameraType = .photoLibrary
+    @State var imageSelected: UIImage = UIImage()
+    
     @State var title: String = ""
     @State var paragraph: String = ""
     
     var str1 = "**Bold**"
     var str2 = "*Italic*"
-    var str3 = "***Italic Bold***"
+    var str3 = "***Bold Italic***"
     var str4 = "~Strike Through~"
     var str5 = "[Click me](https://www.zoho.com)"
     
@@ -27,6 +36,9 @@ struct NoteCreationView: View {
                 VStack(alignment: .leading) {
                     // TODO: custom back button, gallery / camera clips, save button
                     buttonsUI
+                    
+                    // for checking purpose, for image picker
+                    //checkImagePicker
                     
                     titleTextField
                     bodyTextArea
@@ -41,11 +53,24 @@ struct NoteCreationView: View {
             }
         }
         .navigationBarHidden(true)
+        .sheet(isPresented: $openCameraRole, onDismiss: loadImage) {
+            if cameraType == .camera {
+                ImagePicker(selectedImage: $imageSelected, sourceType: .camera)
+            } else {
+                ImagePicker(selectedImage: $imageSelected, sourceType: .photoLibrary)
+            }
+        }
         .confirmationDialog("What do you want to open sir ?", isPresented: $openActionSheet) {
-            Button {} label: {
+            Button {
+                openCameraRole = true
+                cameraType = .camera
+            } label: {
                 Text("Camera")
             }
-            Button {} label: {
+            Button {
+                openCameraRole = true
+                cameraType = .photoLibrary
+            } label: {
                 Text("Photo Gallery")
             }
             Button("Cancel", role: .cancel) {
@@ -76,7 +101,7 @@ extension NoteCreationView {
                 hapticVM.impact(style: .soft)
                 hapticVM.haptic(type: .success)
                 openActionSheet.toggle()
-            })
+            }).foregroundColor(imageSelected != UIImage() ? .green : .black)
             
             ButtonComponent(text: "Save", action: {
                 hapticVM.impact(style: .soft)
@@ -84,6 +109,19 @@ extension NoteCreationView {
             })
             .padding(.leading, 8)
             .disabled(title.isEmpty && paragraph.isEmpty)
+        }
+    }
+    
+    private var checkImagePicker: some View {
+        ZStack {
+            if imageSelected == UIImage() {
+                Image(systemName: "flame")
+            } else {
+                Image(uiImage: imageSelected)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 120, height: 120)
+            }
         }
     }
     
@@ -142,5 +180,9 @@ extension NoteCreationView {
     
     private func endEditing() {
         UIApplication.shared.endEditing()
+    }
+    
+    private func loadImage() {
+        guard let _ = imageSelected as UIImage? else { return }
     }
 }
