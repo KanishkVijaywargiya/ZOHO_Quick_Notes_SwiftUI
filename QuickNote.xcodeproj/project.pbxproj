@@ -19,6 +19,7 @@
 		046F2BA128CCE18C00594EB8 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2BA028CCE18C00594EB8 /* ButtonComponent.swift */; };
 		046F2BA328CCE28E00594EB8 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2BA228CCE28E00594EB8 /* BlurView.swift */; };
 		0478D0F128CDE2F4000FB6E3 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0478D0F028CDE2F4000FB6E3 /* HapticManager.swift */; };
+		048017DB28D0593100A6C4B7 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048017DA28D0593100A6C4B7 /* SplashScreen.swift */; };
 		04BAA14628CC5ECD00CC6972 /* QuickNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA14528CC5ECD00CC6972 /* QuickNoteApp.swift */; };
 		04BAA14828CC5ECD00CC6972 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BAA14728CC5ECD00CC6972 /* ContentView.swift */; };
 		04BAA14A28CC5ED500CC6972 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BAA14928CC5ED500CC6972 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		046F2BA028CCE18C00594EB8 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		046F2BA228CCE28E00594EB8 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		0478D0F028CDE2F4000FB6E3 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		048017DA28D0593100A6C4B7 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		04BAA14228CC5ECD00CC6972 /* QuickNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BAA14528CC5ECD00CC6972 /* QuickNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickNoteApp.swift; sourceTree = "<group>"; };
 		04BAA14728CC5ECD00CC6972 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				046F2BA028CCE18C00594EB8 /* ButtonComponent.swift */,
 				04C17FA328CDC5950044DDE4 /* ImageView.swift */,
 				04C17FA728CDD8440044DDE4 /* GalleryComponent.swift */,
+				048017DA28D0593100A6C4B7 /* SplashScreen.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				0478D0F128CDE2F4000FB6E3 /* HapticManager.swift in Sources */,
 				046F2B9728CC747B00594EB8 /* NotesViewModel.swift in Sources */,
 				046F2B9528CC71BB00594EB8 /* NotesDataService.swift in Sources */,
+				048017DB28D0593100A6C4B7 /* SplashScreen.swift in Sources */,
 				046F2B9128CC679300594EB8 /* NetworkingManager.swift in Sources */,
 				042D9D6D28CF52210016F0CD /* AutoKeyboardHide.swift in Sources */,
 				046F2B9F28CCD75000594EB8 /* GetAttributeString.swift in Sources */,

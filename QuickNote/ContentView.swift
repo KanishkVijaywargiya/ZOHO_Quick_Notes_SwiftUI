@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var splashView: Bool = true
+    
     var body: some View {
-        NavigationView {
-            HomeView().navigationTitle("Notes")
+        VStack {
+            if splashView {
+                SplashScreen()
+            } else {
+                NavigationView {
+                    HomeView().navigationTitle("Notes")
+                }
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                withAnimation(.easeInOut) {
+                    self.splashView = false
+                }
+            }
         }
     }
 }
