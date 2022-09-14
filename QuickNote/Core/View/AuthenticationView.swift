@@ -18,9 +18,6 @@ struct AuthenticationView: View {
                 LoginView().environmentObject(authManager)
             }
         }
-        .alert(isPresented: $authManager.showAlert) {
-            Alert(title: Text("Error"), message: Text(authManager.errorDescription ?? "Error trying to login with credentials, please try again"), dismissButton: .default(Text("Ok")))
-        }
     }
 }
 

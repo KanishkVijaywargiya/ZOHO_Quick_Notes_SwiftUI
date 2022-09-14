@@ -33,7 +33,7 @@ class AuthenticationManager: ObservableObject {
         if canEvaluatePolicy {
             let reason = "Log into your account"
             do {
-                let success = try await context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason)
+                let success = try await context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason)
                 
                 if success {
                     DispatchQueue.main.async {
@@ -68,3 +68,15 @@ class AuthenticationManager: ObservableObject {
         isAuthenticated = false
     }
 }
+
+
+/***
+ You have to use .deviceOwnerAuthentication instead of asking for biometrics. If FaceID is available, it will force the attempt to use this either way.
+ If you try enough times then you will get another dialogue to "Cancel" or fallback to "Use passcode". Choosing the fallback will show you the passcode screen.
+ However, if you specified .deviceOwnerAuthenticationWithBiometrics, you will get the same fallback option. Rather than getting this dialogue I would have expected to receive an error of LAError.Code.biometryLockout. But instead I get this fallback option dialogue. But that is ok...
+ However, if I then tap the fallback option to "Use passcode", it will NOT present the passcode alert. Instead it fails with a LAError.Code.userFallback error.
+ If you use the policy without biometrics, you will not get and be able to catch the .userFallback error.
+ So to sum things up:
+ 1. If you ask for the deviceOwnerAuthenticationWithBiometrics policy then you will have to handle the fallback yourself.
+ 2. If you ask for deviceOwnerAuthentication only, then biometrics will be used if available and authorized, otherwise it will automatically fall back to passcode if biometrics is unavailable, or give you the fallback option to enter passcode automatically if biometrics attemps fail.
+ ***/

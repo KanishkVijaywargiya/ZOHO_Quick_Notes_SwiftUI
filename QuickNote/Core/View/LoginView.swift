@@ -6,27 +6,21 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct LoginView: View {
     @EnvironmentObject var authManager: AuthenticationManager
+    @StateObject var hapticVM = HapticManager()
     
     var body: some View {
-        VStack(spacing: 40) {
-            Title()
-//            switchCases
+        ZStack {
+            Color(hex: "#121212").ignoresSafeArea()
+            if authManager.showAlert {
+                lockScreenView
+            }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(
-            LinearGradient(
-                gradient: Gradient(
-                    colors: [Color.blue, Color.purple]
-                ),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        )
         .onAppear {
-            Task.init {
+            Task {
                 await authManager.authenticateWithBiometrics()
             }
         }
@@ -40,29 +34,34 @@ struct LoginView_Previews: PreviewProvider {
 }
 
 extension LoginView {
-    private var switchCases: some View {
+    private var lockScreenView: some View {
         VStack {
-            switch authManager.biometryType {
-            case .faceID:
-                AuthButton(image: "faceid", text: "Login with FaceID")
-                    .onTapGesture {
-                        Task.init {
-                            await authManager.authenticateWithBiometrics()
-                        }
-                    }
-            case .touchID:
-                AuthButton(image: "touchid", text: "Login with TouchID")
-                    .onTapGesture {
-                        Task.init {
-                            await authManager.authenticateWithBiometrics()
-                        }
-                    }
-            default:
-                NavigationLink(destination: CredentialsLoginView().environmentObject(authManager)
-                ) {
-                    AuthButton(image: "person.fill", text: "Login with your credentials")
-                }
+            Image(systemName: "lock.fill")
+                .font(.system(size: 45, weight: .bold))
+                .foregroundColor(.white)
+                .padding(.bottom, 20)
+            
+            VStack(spacing: 12) {
+                Text("QuickNotes Locked")
+                    .font(.title.bold())
+                    .foregroundColor(.white)
+                
+                Text("Unlock with \(LAContext().biometricType.rawValue) to open QuickNotes")
+                    .font(.body)
+                    .foregroundColor(.white)
             }
+            
+            Text("Use \(LAContext().biometricType.rawValue)")
+                .font(.system(size: 18))
+                .foregroundColor(.blue)
+                .onTapGesture {
+                    hapticVM.impact(style: .soft)
+                    hapticVM.haptic(type: .success)
+                    Task {
+                        await authManager.authenticateWithBiometrics()
+                    }
+                }
+                .padding(.top, 25)
         }
     }
 }

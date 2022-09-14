@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		042D9D6D28CF52210016F0CD /* AutoKeyboardHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042D9D6C28CF52210016F0CD /* AutoKeyboardHide.swift */; };
+		043FBEE328D23AC60075F1C4 /* CheckBiometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FBEE228D23AC60075F1C4 /* CheckBiometry.swift */; };
 		046E934F28D1DDD100202157 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E934E28D1DDD100202157 /* AuthenticationManager.swift */; };
 		046E935128D1E5BC00202157 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E935028D1E5BC00202157 /* LoginView.swift */; };
 		046E935328D1E63100202157 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E935228D1E63100202157 /* Title.swift */; };
-		046E935528D1E64900202157 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046E935428D1E64900202157 /* AuthButton.swift */; };
 		046F2B9128CC679300594EB8 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9028CC679300594EB8 /* NetworkingManager.swift */; };
 		046F2B9328CC6B2600594EB8 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9228CC6B2600594EB8 /* Notes.swift */; };
 		046F2B9528CC71BB00594EB8 /* NotesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F2B9428CC71BA00594EB8 /* NotesDataService.swift */; };
@@ -39,16 +39,15 @@
 		04C17FA628CDD6F10044DDE4 /* ImageGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17FA528CDD6F10044DDE4 /* ImageGallery.swift */; };
 		04C17FA828CDD8440044DDE4 /* GalleryComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C17FA728CDD8440044DDE4 /* GalleryComponent.swift */; };
 		04DB750828D1EB4D009228A4 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB750728D1EB4D009228A4 /* AuthenticationView.swift */; };
-		04DB750A28D1F584009228A4 /* CredentialsLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB750928D1F584009228A4 /* CredentialsLoginView.swift */; };
 		04EDFA9328D0C12400792DFC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EDFA9228D0C12400792DFC /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		042D9D6C28CF52210016F0CD /* AutoKeyboardHide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoKeyboardHide.swift; sourceTree = "<group>"; };
+		043FBEE228D23AC60075F1C4 /* CheckBiometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBiometry.swift; sourceTree = "<group>"; };
 		046E934E28D1DDD100202157 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		046E935028D1E5BC00202157 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		046E935228D1E63100202157 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
-		046E935428D1E64900202157 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		046F2B9028CC679300594EB8 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		046F2B9228CC6B2600594EB8 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		046F2B9428CC71BA00594EB8 /* NotesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesDataService.swift; sourceTree = "<group>"; };
@@ -77,7 +76,6 @@
 		04C17FA528CDD6F10044DDE4 /* ImageGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGallery.swift; sourceTree = "<group>"; };
 		04C17FA728CDD8440044DDE4 /* GalleryComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryComponent.swift; sourceTree = "<group>"; };
 		04DB750728D1EB4D009228A4 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
-		04DB750928D1F584009228A4 /* CredentialsLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsLoginView.swift; sourceTree = "<group>"; };
 		04EDFA9228D0C12400792DFC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +178,7 @@
 				042D9D6C28CF52210016F0CD /* AutoKeyboardHide.swift */,
 				04EDFA9228D0C12400792DFC /* ImagePicker.swift */,
 				046E934E28D1DDD100202157 /* AuthenticationManager.swift */,
+				043FBEE228D23AC60075F1C4 /* CheckBiometry.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -193,7 +192,6 @@
 				04C17FA728CDD8440044DDE4 /* GalleryComponent.swift */,
 				048017DA28D0593100A6C4B7 /* SplashScreen.swift */,
 				046E935228D1E63100202157 /* Title.swift */,
-				046E935428D1E64900202157 /* AuthButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -216,7 +214,6 @@
 				04C17FA528CDD6F10044DDE4 /* ImageGallery.swift */,
 				046E935028D1E5BC00202157 /* LoginView.swift */,
 				04DB750728D1EB4D009228A4 /* AuthenticationView.swift */,
-				04DB750928D1F584009228A4 /* CredentialsLoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C17FA428CDC5950044DDE4 /* ImageView.swift in Sources */,
-				046E935528D1E64900202157 /* AuthButton.swift in Sources */,
 				04C17FA028CDBB190044DDE4 /* ImageLoaderService.swift in Sources */,
 				046F2B9928CCB6A400594EB8 /* NavigationController.swift in Sources */,
 				046F2BA128CCE18C00594EB8 /* ButtonComponent.swift in Sources */,
@@ -314,12 +310,12 @@
 				04BAA14628CC5ECD00CC6972 /* QuickNoteApp.swift in Sources */,
 				0478D0F128CDE2F4000FB6E3 /* HapticManager.swift in Sources */,
 				046F2B9728CC747B00594EB8 /* NotesViewModel.swift in Sources */,
-				04DB750A28D1F584009228A4 /* CredentialsLoginView.swift in Sources */,
 				046F2B9528CC71BB00594EB8 /* NotesDataService.swift in Sources */,
 				048017DB28D0593100A6C4B7 /* SplashScreen.swift in Sources */,
 				046F2B9128CC679300594EB8 /* NetworkingManager.swift in Sources */,
 				04DB750828D1EB4D009228A4 /* AuthenticationView.swift in Sources */,
 				042D9D6D28CF52210016F0CD /* AutoKeyboardHide.swift in Sources */,
+				043FBEE328D23AC60075F1C4 /* CheckBiometry.swift in Sources */,
 				046E935328D1E63100202157 /* Title.swift in Sources */,
 				046F2B9F28CCD75000594EB8 /* GetAttributeString.swift in Sources */,
 				046F2B9328CC6B2600594EB8 /* Notes.swift in Sources */,
@@ -455,7 +451,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow QuickNotes to access camera";
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow $(PRODUCT_NAME) to use FaceID to Log into the app";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow QuickNote to use FaceID to Log into the app";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow QuickNotes to access photo gallery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -487,7 +483,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow QuickNotes to access camera";
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow $(PRODUCT_NAME) to use FaceID to Log into the app";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please allow QuickNote to use FaceID to Log into the app";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow QuickNotes to access photo gallery";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
