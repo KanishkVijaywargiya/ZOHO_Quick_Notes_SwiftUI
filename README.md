@@ -43,6 +43,7 @@ Screen Designs
 2. Matched Geometry Effect (App Store card animation) for Photo Gallery section in Detail screen.
 3. Users can enter there name & can select an avatar which can be stored in AppStorage && FileManager for data persistent.
 4. Going to add a lot of cool animations.
+5. Share sheet for sharing whole note on watsapp, instagram etc...
 
 
 
