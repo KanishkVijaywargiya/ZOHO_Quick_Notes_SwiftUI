@@ -16,7 +16,7 @@ struct ContentView: View {
                 SplashScreen()
             } else {
                 NavigationView {
-                    HomeView().navigationTitle("Notes")
+                    AuthenticationView()
                 }
             }
         }
