@@ -12,15 +12,12 @@
 
 ## (Logo Included)
 ## (Splash Screen)
-===========================
 1. Splash screen is added, custom made in ###SwiftUI
 ----------------------------------------------------------------------------------------------------------------
 ## (Home Screen)
-============================
 2. Cool Waterfall Design with auto random colors for each cards. Fab button is also there to navigate to notes creation screen.
 ----------------------------------------------------------------------------------------------------------------
 ## (Notes Creation Screen)
-============================
 3. Markdown feature (Bold, Italic, Bold Italic, Strike Through, Link, etc...)
 4. Keyboard hide touching outside anywhere in the screen
 5. Confirmation Dialog for opening Camera & photo library. User can import pics from gallery or take snap from camera as well. With indication of color change of clip icon.
@@ -28,7 +25,6 @@
 7. We have designed an Output box, where user can see the output of the notes what they are writing.
 ----------------------------------------------------------------------------------------------------------------
 ## (Detail Screen)
-============================
 8. Markdown features accessible in detail screen. Users can see bold, italic, link text & other markdowns also.   
 9. Clicking on Images, direct us to a full screen cover, which contains all the list of images, user can scroll horizontally to see the images.
 
