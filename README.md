@@ -29,8 +29,8 @@
 9. Clicking on Images, direct us to a full screen cover, which contains all the list of images, user can scroll horizontally to see the images.
 
 Screen Designs
-
-![IMG_0758](https://user-images.githubusercontent.com/43451046/190100988-1a606e24-d456-4203-8482-1fbf994adbc8.PNG | width=100 height=400)
+<img src="https://user-images.githubusercontent.com/43451046/190100988-1a606e24-d456-4203-8482-1fbf994adbc8.PNG" width="100" height="300">
+<!-- ![IMG_0758](https://user-images.githubusercontent.com/43451046/190100988-1a606e24-d456-4203-8482-1fbf994adbc8.PNG) -->
 ![IMG_0763](https://user-images.githubusercontent.com/43451046/190101012-88c8684b-242a-483f-ba0d-eaccdf408000.PNG)
 ![IMG_0761](https://user-images.githubusercontent.com/43451046/190101035-a8db0cb7-04be-4f4b-8cbf-21ffd18f4531.PNG)
 ![IMG_0759](https://user-images.githubusercontent.com/43451046/190101091-8bd23e50-1526-4bc9-8e0e-d513a6239f5b.PNG)
