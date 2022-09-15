@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 
 struct ImagePicker: UIViewControllerRepresentable {
-    @Binding var selectedImage: UIImage
+    @Binding var selectedImage: Data
     @Environment(\.dismiss) private var dismiss
     var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
@@ -31,7 +31,8 @@ struct ImagePicker: UIViewControllerRepresentable {
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             guard let image = info[.originalImage] as? UIImage else { return }
-            self.parent.selectedImage = image
+            let data = image.jpegData(compressionQuality: 0.50)
+            self.parent.selectedImage = data!
             self.parent.dismiss()
         }
     }

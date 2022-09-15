@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var vm = NotesViewModel()
+    @StateObject var coreVM = CoreDataViewModel()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
@@ -63,23 +64,40 @@ extension HomeView {
             
             HStack(alignment: .top, spacing: 12) {
                 LazyVStack(spacing: 12) {
-                    ForEach(splitArray[0]) { item in
-                        NavigationLink {
-                            DetailView(detailItems: item)
-                        } label: {
-                            Card(item: item)
+                    ForEach(coreVM.savedEntities, id: \.id) { item in
+                        //                        NavigationLink {
+                        //                            DetailView(detailItems: item)
+                        //                        } label: {
+                        HStack {
+                            Text(item.title)
+                            if let image = item.imageURL {
+                                Image(uiImage: UIImage(data: image)!)
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                            }
                         }
+                        //                            Card(item: item)
+                        //                        }
                     }
                 }
-                LazyVStack(spacing: 12) {
-                    ForEach(splitArray[1]) { item in
-                        NavigationLink {
-                            DetailView(detailItems: item)
-                        } label: {
-                            Card(item: item)
-                        }
-                    }
-                }
+                //                LazyVStack(spacing: 12) {
+                //                    ForEach(splitArray[0]) { item in
+                //                        NavigationLink {
+                //                            DetailView(detailItems: item)
+                //                        } label: {
+                //                            Card(item: item)
+                //                        }
+                //                    }
+                //                }
+                //                LazyVStack(spacing: 12) {
+                //                    ForEach(splitArray[1]) { item in
+                //                        NavigationLink {
+                //                            DetailView(detailItems: item)
+                //                        } label: {
+                //                            Card(item: item)
+                //                        }
+                //                    }
+                //                }
             }.padding(.horizontal, 18)
         }
     }

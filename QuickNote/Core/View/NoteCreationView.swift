@@ -12,14 +12,15 @@ enum CameraType {
 }
 
 struct NoteCreationView: View {
-    @Environment(\.dismiss) var dismissMode
+    @Environment(\.dismiss) var dismiss
     @StateObject var hapticVM = HapticManager()
+    @StateObject var coreDataVM = CoreDataViewModel()
     
     // confimation dialog
     @State var openActionSheet: Bool = false
     @State var openCameraRole: Bool = false
     @State var cameraType: CameraType = .photoLibrary
-    @State var imageSelected: UIImage = UIImage()
+    @State var imageSelected: Data = .init(count: 0)
     
     @State var title: String = ""
     @State var paragraph: String = ""
@@ -94,36 +95,44 @@ extension NoteCreationView {
             ButtonComponent(text: "chevron.left", type: .two, action: {
                 hapticVM.impact(style: .soft)
                 hapticVM.haptic(type: .success)
-                dismissMode()
+                dismiss()
             })
             Spacer()
             ButtonComponent(text: "paperclip", type: .two, action: {
                 hapticVM.impact(style: .soft)
                 hapticVM.haptic(type: .success)
                 openActionSheet.toggle()
-            }).foregroundColor(imageSelected != UIImage() ? .green : .black)
+            })
+            .foregroundColor(imageSelected != .init(count: 0) ? .green : .black)
             
             ButtonComponent(text: "Save", action: {
                 hapticVM.impact(style: .soft)
                 hapticVM.haptic(type: .success)
+                coreDataVM.addNote(title: title, body: paragraph, imageURL: imageSelected)
+                self.title = ""
+                self.paragraph = ""
+                self.imageSelected = .init(count: 0)
+                DispatchQueue.main.asyncAfter(deadline: .now()+5) {
+                    dismiss()
+                }
             })
             .padding(.leading, 8)
             .disabled(title.isEmpty && paragraph.isEmpty)
         }
     }
     
-    private var checkImagePicker: some View {
-        ZStack {
-            if imageSelected == UIImage() {
-                Image(systemName: "flame")
-            } else {
-                Image(uiImage: imageSelected)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 120, height: 120)
-            }
-        }
-    }
+//    private var checkImagePicker: some View {
+//        ZStack {
+//            if imageSelected == UIImage() {
+//                Image(systemName: "flame")
+//            } else {
+//                Image(uiImage: imageSelected)
+//                    .resizable()
+//                    .scaledToFill()
+//                    .frame(width: 120, height: 120)
+//            }
+//        }
+//    }
     
     private var titleTextField: some View {
         TextField("Title", text: $title)
@@ -183,6 +192,6 @@ extension NoteCreationView {
     }
     
     private func loadImage() {
-        guard let _ = imageSelected as UIImage? else { return }
+        //guard let _ = imageSelected as UIImage? else { return }
     }
 }
