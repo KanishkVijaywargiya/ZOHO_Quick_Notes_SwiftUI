@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var splashView: Bool = true
-    
+     
     var body: some View {
         VStack {
             if splashView {
