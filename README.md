@@ -1,4 +1,4 @@
-### ZOHO_Quick_Notes_SwiftUI
+### Quick_Notes_SwiftUI
 
 ### Swift && SwiftUI
 
